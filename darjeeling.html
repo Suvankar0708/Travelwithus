@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Darjeeling | Travelwithus</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7f8;
+    color: #17202a;
+    line-height: 1.6;
+}
+
+.navbar {
+    background: white;
+    padding: 16px 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nav {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.logo {
+    color: #087f5b;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 15px;
+    color: #087f5b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    background:
+        linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 12vw, 80px);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.title h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.title p {
+    color: #687078;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.info {
+    background: white;
+    padding: 25px 18px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
+
+.info-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.info h3 {
+    margin-bottom: 8px;
+}
+
+.info p {
+    color: #687078;
+}
+
+.places {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.place {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
+
+.place img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.place-content {
+    padding: 20px;
+}
+
+.place-content h3 {
+    margin-bottom: 8px;
+}
+
+.place-content p {
+    color: #687078;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 25px;
+    background: #087f5b;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.footer {
+    background: #17202a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+@media (max-width: 700px) {
+    .info-grid,
+    .places {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav">
+        <div class="logo">🌍 Travelwithus</div>
+        <a class="back" href="index.html">← Back to Home</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Darjeeling</h1>
+        <p>Queen of the Hills • West Bengal, India</p>
+    </div>
+</section>
+
+<section class="section">
+
+    <div class="title">
+        <h2>Discover Darjeeling</h2>
+        <p>A beautiful Himalayan destination famous for mountains, tea gardens and unforgettable views.</p>
+    </div>
+
+    <div class="info-grid">
+
+        <div class="info">
+            <div class="info-icon">🏔️</div>
+            <h3>Mountains</h3>
+            <p>Enjoy spectacular Himalayan landscapes.</p>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">🍵</div>
+            <h3>Tea Gardens</h3>
+            <p>Explore the famous Darjeeling tea gardens.</p>
+        </div>
+
+        <div class="info">
+            <div class="info-icon">🚂</div>
+            <h3>Toy Train</h3>
+            <p>Experience the iconic Darjeeling Himalayan Railway.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="title">
+        <h2>Places to Visit</h2>
+        <p>Some popular experiences around Darjeeling.</p>
+    </div>
+
+    <div class="places">
+
+        <div class="place">
+            <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=900&q=80">
+            <div class="place-content">
+                <h3>Tiger Hill</h3>
+                <p>Wake up early and enjoy breathtaking sunrise views over the Himalayas.</p>
+            </div>
+        </div>
+
+        <div class="place">
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80">
+            <div class="place-content">
+                <h3>Batasia Loop</h3>
+                <p>A beautiful railway loop surrounded by mountain scenery.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <a class="button" href="index.html">← Explore More Destinations</a>
+    </div>
+
+</section>
+
+<footer class="footer">
+    <h3>🌍 Travelwithus</h3>
+    <p>Travel more. Explore more. Live more.</p>
+    <p>© 2026 Travelwithus</p>
+</footer>
+
+</body>
+</html>
