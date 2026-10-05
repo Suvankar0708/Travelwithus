@@ -389,12 +389,13 @@ body {
     let places = "";
     let food = "";
     let tip = "";
-
+    let itinerary = "";
     if (destination === "Darjeeling") {
         budget = "₹4,000–₹8,000 per person";
         places = "Tiger Hill, Batasia Loop, Darjeeling Mall and tea gardens";
         food = "Try momos, thukpa and Darjeeling tea";
         tip = "Carry warm clothes and comfortable shoes.";
+        itinerary = "🗓️ Day 1: Mall Road and Batasia Loop<br>🗓️ Day 2: Tiger Hill and tea gardens<br>🗓️ Day 3: Local sightseeing and shopping";
     }
 
     if (destination === "Goa") {
@@ -431,6 +432,8 @@ body {
             <p><b>🍜 Food:</b> ${food}</p>
 
             <p><b>💡 Travel Tip:</b> ${tip}</p>
+            <p style="margin-top:15px;"><b>🗓️ Day-by-Day Itinerary:</b></p>
+<p>${itinerary}</p>
 
         </div>
     `;
