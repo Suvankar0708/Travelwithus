@@ -319,7 +319,54 @@ body {
 
     </div>
 </section>
+<section class="section" id="planner">
 
+    <div class="title">
+        <h2>🧳 Plan Your Trip</h2>
+        <p>Choose your destination and trip details.</p>
+    </div>
+
+    <div style="max-width:650px; margin:auto; background:white; padding:25px; border-radius:20px; box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+
+        <label><b>📍 Destination</b></label>
+
+        <select id="destination" style="width:100%; padding:14px; margin:8px 0 20px; border:1px solid #ddd; border-radius:10px; font-size:16px;">
+            <option value="">Choose destination</option>
+            <option value="Darjeeling">Darjeeling</option>
+            <option value="Goa">Goa</option>
+            <option value="Sikkim">Sikkim</option>
+        </select>
+
+        <label><b>📅 Trip Duration</b></label>
+
+        <select id="duration" style="width:100%; padding:14px; margin:8px 0 20px; border:1px solid #ddd; border-radius:10px; font-size:16px;">
+            <option value="">Choose duration</option>
+            <option value="2">2 Days</option>
+            <option value="3">3 Days</option>
+            <option value="5">5 Days</option>
+            <option value="7">7 Days</option>
+        </select>
+
+        <label><b>👥 Travelers</b></label>
+
+        <select id="travelers" style="width:100%; padding:14px; margin:8px 0 20px; border:1px solid #ddd; border-radius:10px; font-size:16px;">
+            <option value="">Choose travelers</option>
+            <option value="1">Solo</option>
+            <option value="2">2 People</option>
+            <option value="3">3 People</option>
+            <option value="4">4 People</option>
+            <option value="5">5+ People</option>
+        </select>
+
+        <button onclick="planTrip()" class="button" style="border:none; cursor:pointer; width:100%;">
+            ✨ Create My Trip Plan
+        </button>
+
+        <div id="tripResult" style="margin-top:20px;"></div>
+
+    </div>
+
+                                   </section>
 <footer class="footer">
     <h3>🌍 Travelwithus</h3>
     <p>Travel more. Explore more. Live more.</p>
@@ -327,6 +374,41 @@ body {
 </footer>
 
 <script>
+    function planTrip() {
+    const destination = document.getElementById("destination").value;
+    const duration = document.getElementById("duration").value;
+    const travelers = document.getElementById("travelers").value;
+    const result = document.getElementById("tripResult");
+
+    if (!destination || !duration || !travelers) {
+        result.innerHTML = "<p style='color:#d35400; font-weight:bold;'>Please choose all trip details first.</p>";
+        return;
+    }
+
+    let message = "";
+
+    if (destination === "Darjeeling") {
+        message = "🏔️ Darjeeling: Explore Tiger Hill, Batasia Loop, tea gardens and the Himalayan views.";
+    }
+
+    if (destination === "Goa") {
+        message = "🌴 Goa: Enjoy beaches, Fort Aguada, local food and beautiful coastal views.";
+    }
+
+    if (destination === "Sikkim") {
+        message = "🏔️ Sikkim: Explore Gangtok, Tsomgo Lake and beautiful Himalayan landscapes.";
+    }
+
+    result.innerHTML = `
+        <div style="background:#f5f7f8; padding:20px; border-radius:15px;">
+            <h3>✨ Your Trip Plan</h3>
+            <p><b>📍 Destination:</b> ${destination}</p>
+            <p><b>📅 Duration:</b> ${duration} Days</p>
+            <p><b>👥 Travelers:</b> ${travelers}</p>
+            <p style="margin-top:12px;">${message}</p>
+        </div>
+    `;
+    }
 function searchPlaces() {
     const input = document.getElementById("searchInput").value.toLowerCase();
     const cards = document.querySelectorAll(".card");
