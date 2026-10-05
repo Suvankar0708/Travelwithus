@@ -385,27 +385,53 @@ body {
         return;
     }
 
-    let message = "";
+    let budget = "";
+    let places = "";
+    let food = "";
+    let tip = "";
 
     if (destination === "Darjeeling") {
-        message = "🏔️ Darjeeling: Explore Tiger Hill, Batasia Loop, tea gardens and the Himalayan views.";
+        budget = "₹4,000–₹8,000 per person";
+        places = "Tiger Hill, Batasia Loop, Darjeeling Mall and tea gardens";
+        food = "Try momos, thukpa and Darjeeling tea";
+        tip = "Carry warm clothes and comfortable shoes.";
     }
 
     if (destination === "Goa") {
-        message = "🌴 Goa: Enjoy beaches, Fort Aguada, local food and beautiful coastal views.";
+        budget = "₹5,000–₹10,000 per person";
+        places = "Baga Beach, Fort Aguada, Panaji and nearby beaches";
+        food = "Try Goan fish curry, seafood and local snacks";
+        tip = "Carry sunscreen, comfortable clothes and stay hydrated.";
     }
 
     if (destination === "Sikkim") {
-        message = "🏔️ Sikkim: Explore Gangtok, Tsomgo Lake and beautiful Himalayan landscapes.";
+        budget = "₹5,000–₹10,000 per person";
+        places = "Gangtok, Tsomgo Lake, MG Marg and Himalayan viewpoints";
+        food = "Try momos, thukpa and traditional Sikkimese food";
+        tip = "Carry warm clothes because mountain weather can change quickly.";
     }
 
     result.innerHTML = `
         <div style="background:#f5f7f8; padding:20px; border-radius:15px;">
+
             <h3>✨ Your Trip Plan</h3>
+
             <p><b>📍 Destination:</b> ${destination}</p>
+
             <p><b>📅 Duration:</b> ${duration} Days</p>
+
             <p><b>👥 Travelers:</b> ${travelers}</p>
-            <p style="margin-top:12px;">${message}</p>
+
+            <hr style="margin:15px 0; border:none; border-top:1px solid #ddd;">
+
+            <p><b>💰 Estimated Budget:</b> ${budget}</p>
+
+            <p><b>📍 Places to Visit:</b> ${places}</p>
+
+            <p><b>🍜 Food:</b> ${food}</p>
+
+            <p><b>💡 Travel Tip:</b> ${tip}</p>
+
         </div>
     `;
     }
