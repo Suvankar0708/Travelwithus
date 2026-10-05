@@ -367,6 +367,34 @@ body {
     </div>
 
                                    </section>
+    <section class="section" id="trip-request">
+
+    <div class="title">
+        <h2>📩 Plan Your Trip With Us</h2>
+        <p>Send us your trip details and we'll help you plan.</p>
+    </div>
+
+    <div style="max-width:650px; margin:auto; background:white; padding:25px; border-radius:20px; box-shadow:0 5px 20px rgba(0,0,0,0.08);">
+
+        <input id="travelerName" type="text" placeholder="👤 Your Name"
+        style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:10px; font-size:16px;">
+
+        <input id="travelerContact" type="text" placeholder="📱 Phone or Email"
+        style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #ddd; border-radius:10px; font-size:16px;">
+
+        <input id="travelDate" type="date"
+        style="width:100%; padding:14px; margin-bottom:20px; border:1px solid #ddd; border-radius:10px; font-size:16px;">
+
+        <button onclick="submitTripRequest()" class="button"
+        style="border:none; cursor:pointer; width:100%;">
+            📩 Send Trip Request
+        </button>
+
+        <div id="requestResult" style="margin-top:20px;"></div>
+
+    </div>
+
+</section>
 <footer class="footer">
     <h3>🌍 Travelwithus</h3>
     <p>Travel more. Explore more. Live more.</p>
@@ -435,6 +463,27 @@ body {
             <p style="margin-top:15px;"><b>🗓️ Day-by-Day Itinerary:</b></p>
 <p>${itinerary}</p>
 
+        </div>
+    `;
+    }
+    function submitTripRequest() {
+    const name = document.getElementById("travelerName").value;
+    const contact = document.getElementById("travelerContact").value;
+    const date = document.getElementById("travelDate").value;
+    const result = document.getElementById("requestResult");
+
+    if (!name || !contact || !date) {
+        result.innerHTML = "<p style='color:#d35400; font-weight:bold;'>Please fill in all details.</p>";
+        return;
+    }
+
+    result.innerHTML = `
+        <div style="background:#eaf7f2; padding:20px; border-radius:15px;">
+            <h3>✅ Trip Request Received!</h3>
+            <p><b>👤 Name:</b> ${name}</p>
+            <p><b>📱 Contact:</b> ${contact}</p>
+            <p><b>📅 Travel Date:</b> ${date}</p>
+            <p style="margin-top:12px;">Thank you! Travelwithus will help you plan your journey.</p>
         </div>
     `;
     }
